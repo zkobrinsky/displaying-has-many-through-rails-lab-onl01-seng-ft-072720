@@ -15,6 +15,8 @@ class DoctorsController < ApplicationController
   end
 
   def show
+    @doctor = Doctor.find_by(params[:id])
+    @appointments = @doctor.appointments
   end
 
   def index

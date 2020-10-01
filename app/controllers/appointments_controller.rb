@@ -15,8 +15,10 @@ class AppointmentsController < ApplicationController
   end
 
   def show
+    @appointment = Appointment.find_by(params[:id])
   end
 
   def index
+    raise ActionController::RoutingError.new('Not Found')
   end
 end
